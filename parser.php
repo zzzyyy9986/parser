@@ -1,13 +1,11 @@
 <?php
 $out = file_get_contents("https://www.vinorus.ru/ru-RU/about/contacts.aspx");
 
-//$text = mb_convert_encoding($out, 'utf-8', 'UTF-8');
 
 $out = mb_convert_encoding($out, 'HTML-ENTITIES', 'utf-8');
 
 $dom = new DOMDocument;	//создаем объект
 $dom->loadHTML($out);	//загружаем контент
-$node = $dom->getElementById('section-2030');
 
 
 $finder = new DomXPath($dom);

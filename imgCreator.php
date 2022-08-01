@@ -1,8 +1,4 @@
 <?php
-$startX = ($_GET["width"] - $_GET["textWidth"])/2;
-$startY = ($_GET["height"] - $_GET["textHeight"])/2;
-//var_dump($startX);
-//die();
 header("Content-Type: image/png");
 $im = @imagecreate($_GET["width"], $_GET["height"])
 or die("Невозможно создать поток изображения");
